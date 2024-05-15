@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <title>Carrossel</title>
+</head>
+<body>
+  <div class="links">
+    <a href="contato">Contato</a>
+  </div>
+  <div class="container">
+    <a class="prev" href="#" onclick="addSlides(-1)">
+      <span>&#10094;</span>
+      <span class="prev-text">Voltar</span>
+    </a>
+    <div>
+      <div class="slides fade">
+        <img src="imagens/IA.jpg" />
+        <h2 class="title">Inteligência artificial</h2>
+        <p class="content">Projetos de inteligência artificial</p>
+      </div>
+      <div class="slides fade">
+        <img src="imagens/ciencia_de_dados.jpg" />
+        <h2 class="title">Ciência de dados</h2>
+        <p class="content">Projetos sobre ciência de dados</p>
+      </div>
+      <div class="slides fade">
+        <img src="imagens/Robo.jpg" />
+        <h2 class="title">Automatização</h2>
+        <p class="content">Projetos sobre automatização<br/><br/>
+        </p>
+      </div>
+      <div class="slides fade">
+        <img src="imagens/Web.jpg" />
+        <h2 class="title">Desenvolvimento web</h2>
+        <p class="content">Projetos sobre Desenvolvimento web
+        </p>
+      </div>
+      <div class="slides fade">
+        <img src="imagens/Programacao.jpg" />
+        <h2 class="title">C++,Golang</h2>
+        <p class="content">Projetos sobre outras habilidades<br/><br/>
+        </p>
+      </div>
+    </div>
+    <div class="footer">
+      <button class="button" onclick="addSlides(1)">Próximo</button>
+      <div class="dot-box">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
