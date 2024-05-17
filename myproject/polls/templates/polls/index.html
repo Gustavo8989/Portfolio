@@ -1,9 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="{% static 'polls/style.css' %}" />
   <title>Carrossel</title>
 </head>
 <body>
@@ -17,29 +18,29 @@
     </a>
     <div>
       <div class="slides fade">
-        <img src="imagens/IA.jpg" />
+        <img src="{% static 'polls/imagens/IA.jpg' %}"/>
         <h2 class="title">Inteligência artificial</h2>
         <p class="content">Projetos de inteligência artificial</p>
       </div>
       <div class="slides fade">
-        <img src="imagens/ciencia_de_dados.jpg" />
+        <img src="{% static 'polls/imagens/ciencia_de_dados.jpg' %}" />
         <h2 class="title">Ciência de dados</h2>
         <p class="content">Projetos sobre ciência de dados</p>
       </div>
       <div class="slides fade">
-        <img src="imagens/Robo.jpg" />
+        <img src="{% static 'polls/imagens/Robo.jpg' %}" />
         <h2 class="title">Automatização</h2>
         <p class="content">Projetos sobre automatização<br/><br/>
         </p>
       </div>
       <div class="slides fade">
-        <img src="imagens/Web.jpg" />
+        <img src="{% static 'polls/imagens/web.jpg' %}" />
         <h2 class="title">Desenvolvimento web</h2>
         <p class="content">Projetos sobre Desenvolvimento web
         </p>
       </div>
       <div class="slides fade">
-        <img src="imagens/Programacao.jpg" />
+        <img src="{% static 'polls/imagens/Programacao.jpg' %}" />
         <h2 class="title">C++,Golang</h2>
         <p class="content">Projetos sobre outras habilidades<br/><br/>
         </p>
@@ -56,6 +57,6 @@
       </div>
     </div>
   </div>
-  <script src="app.js"></script>
+  <script src="{% static 'polls/js/app.js' %}"></script>
 </body>
 </html>
