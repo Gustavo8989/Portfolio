@@ -12,3 +12,14 @@ def contato(request):
         form = contatos(request.POST)
         if form.is_valid() :
             form.send_email()
+            messages.success(request, "Email enviado com sucesso")
+            form = contatos()
+        else:
+            messages.error(request,"Não foi possivel enviar o email")
+    else:
+        form = contatos()
+    context = {
+        "form":form
+        }
+        
+    return render(request,"contato.html",context)
