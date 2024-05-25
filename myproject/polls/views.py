@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib import messages 
-from .forms import contatos 
+from .models import contatos 
 # Create your views here.
 
 def index(request):
@@ -21,5 +21,4 @@ def contato(request):
     context = {
         "form":form
         }
-        
-    return render(request,"contato.html",context)
+    return render(request,"polls/contato.html",context)
