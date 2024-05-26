@@ -2,6 +2,7 @@ from django.db import models
 from django import forms 
 from django.core.mail import EmailMessage
 import re 
+import qrcode 
 
 class contatos(forms.Form):
     nome = forms.CharField(label="Nome",max_length=50)
