@@ -15,7 +15,7 @@ class email(forms.Form):
         assunto = self.cleaned_data['assunto']
         menssagem = self.cleaned_data['messagem'] 
         corpo_email = f"Nome:{nome}\nMenssagem{menssagem}"
-        verificando_email = verificando_email()
+        verificando_email = verificando_email(self.email)
         mail = EmailMessage(
             subject=assunto,
             para_email='gustavohenriquealves418@gmail.com',
