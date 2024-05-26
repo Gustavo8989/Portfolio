@@ -14,8 +14,10 @@ body {
     background-image: linear-gradient(to bottom left, #4B75F2,#183F8C,#2C4A73,#5CD7F2);
   }
 .links a{
-  height: 650px;
+  top: -350px;
   color: white;
+  text-decoration: none;
+  position: relative;
 }
 .slides {
   gap: 8px;
