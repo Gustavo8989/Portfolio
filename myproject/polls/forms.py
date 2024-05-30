@@ -33,3 +33,4 @@ class email(forms.Form):
             return HttpResponse("Email valido")
         else:
             return HttpResponse("Email invalido")
+#https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/Forms
