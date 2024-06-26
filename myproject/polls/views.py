@@ -3,7 +3,6 @@ from django.http import HttpResponse
 from django.contrib import messages 
 from .forms import email
 import re  
-
 # Create your views here.
 
 def index(request):

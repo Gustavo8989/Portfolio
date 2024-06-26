@@ -1,9 +1,9 @@
 from django.db import models
 from django import forms 
 from django.core.mail import EmailMessage
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
+from django.http import FileResponse 
 import re 
-import qrcode 
 
 class email(forms.Form):
     nome = forms.CharField(label="Nome",max_length=50)
@@ -26,6 +26,8 @@ class email(forms.Form):
             }
         )
         mail.send()
+        #resposta = FileResponse("")
+    
     def verificando_email(self):
         padra_email = r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b"
         resultado = re.search(padra_email,self.email)
@@ -33,4 +35,3 @@ class email(forms.Form):
             return HttpResponse("Email valido")
         else:
             return HttpResponse("Email invalido")
-#https://developer.mozilla.org/pt-BR/docs/Learn/Server-side/Django/Forms
