@@ -1,9 +1,11 @@
-from django.db import models
+from django.db import models 
 from django import forms 
 from django.core.mail import EmailMessage
 from django.http import HttpResponse, HttpResponseRedirect
 from django.http import FileResponse 
+from . import views 
 import re 
+
 
 class email(forms.Form):
     nome = forms.CharField(label="Nome",max_length=50)
@@ -19,14 +21,15 @@ class email(forms.Form):
         mail = EmailMessage(
             subject=assunto,
             para_email='gustavohenriquealves418@gmail.com',
-            to=[email,],
+            to=[email],
             body=corpo_email,
             headers={
                 'Replat-to':'gustavohenriquealves418@gmail.com'
             }
         )
         mail.send()
-        #resposta = FileResponse("")
+        #enviando = request.GET.get(mail)
+        #resposta = FileResponse(views.)
     
     def verificando_email(self):
         padra_email = r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b"

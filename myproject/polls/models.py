@@ -1,5 +1,9 @@
 from django.db import models
-from django import forms 
 from django.core.mail import EmailMessage
+from . import views 
+from . import forms 
 import re 
-import qrcode 
+ 
+
+class recenbendo_email:
+    pass 

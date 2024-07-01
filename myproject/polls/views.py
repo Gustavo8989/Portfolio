@@ -11,3 +11,6 @@ def index(request):
 def contato(request):
     teste = email()
     return render(request,"polls/contato.html",{'teste':teste})
+
+def email_success(request):
+    return render(request, "polls/email_success.html") 
