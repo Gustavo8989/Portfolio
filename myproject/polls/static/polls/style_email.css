@@ -1,3 +1,8 @@
-*{
-    text-aling:center
+h1{
+    text-align:center;
+}
+.link a{
+    text-decoration:none;
+    display:flex;
+    top:100px;
 }

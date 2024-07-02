@@ -28,9 +28,9 @@ class email(forms.Form):
             }
         )
         mail.send()
-        #enviando = request.GET.get(mail)
-        #resposta = FileResponse(views.)
-    
+        resposta = FileResponse(open("","rb"))
+        proposta_email = request.POST.get(mail) 
+
     def verificando_email(self):
         padra_email = r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b"
         resultado = re.search(padra_email,self.email)
