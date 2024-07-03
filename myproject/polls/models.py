@@ -1,9 +1,6 @@
 from django.db import models
 from django.core.mail import EmailMessage
-from . import views 
-from . import forms 
+from django.shortcuts import render   
 import re 
  
 
-class recenbendo_email:
-    pass 

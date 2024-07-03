@@ -1,7 +1,7 @@
 h1{
     text-align:center;
 }
-.link a{
+a{
     text-decoration:none;
     display:flex;
     top:100px;
